@@ -8,6 +8,15 @@
 	4) JQuery, 
 	5) Bootstrap 4.0
 
+- Confession:
+Description: Here are some trouble I ran into and how I resolved them and some are still unsolved problems.
+	1) How to quickly jump to different section of the page:
+	![issue](https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2FJump%20to%20a%20section.png?1550218364372) 
+		* href, section id matching with project.
+	![resolved](https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2Ffinal%20jump.png?1550218363558)
+
+	2) Smooth scrolling: after some research I found out 
+
 
 - Your process/approach.
 	Process, approach: First, I drew an outline of a site that meets all the min specs on piece of paper.
