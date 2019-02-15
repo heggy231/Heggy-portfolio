@@ -1,19 +1,69 @@
 
-
-- A `README.md` file with explanations of:
+- A working site, built by you, hosted somewhere on the internet.
+- A Git repository, hosted on your personal GitHub, that includes a link to your hosted site and frequent commits dating back to the beginning of the project.
+[ ] Use Flexbox/Grid to create a multi-column layout.
+[ ] A `README.md` file with explanations of:
   - Technologies used.
-	1) HTML5, 
-	2) CSS, 
-	3) JavaScript, 
-	4) JQuery, 
-	5) Bootstrap 4.0
+  - Your process/approach.
+  - Unsolved problems.
+  - Your biggest wins and challenges.
+[ ] Screenshots of the snippets of code you used to solve particularly interesting problems (think code highlights).
+[ ] An in-class demo of the site that shows off the interactions you worked on.
+[ ] A carousel whose images slide to the side on a timer, along with indicators that the user can click to navigate to a particular project.
+
+	![](readme-assets/carousel.gif)
+	- Use the internet to find great carousels! [BootStrap Version](https://getbootstrap.com/docs/4.0/components/carousel/) [Materialize Version](https://materializecss.com/carousel.html)
+
+[ ] Functionality that allows a carousel image to enlarge in a lightbox when the user clicks on it. Clicking anywhere on the screen when the lightbox is open should close the lightbox.
+
+	![](readme-assets/lightbox.gif)
+
+[ ] Nav bar functionality that allows the page to scroll smoothly to the correspending section when a nav item is clicked.
+
+	![](readme-assets/smooth-scroll.gif)
+
+[ ] Nav bar functionality that highlights a nav item when the user scrolls to the corresponding section of the page.
+
+	![](readme-assets/nav-highlight.gif)
+
+[ ] A testimonials section in which testimonials rotate in and out on a timer.
+
+	![](readme-assets/testimonials.gif)
+
+[ ] A mobile nav that expands and collapses when a user clicks on the hamburger icon.
+
+	![](readme-assets/mobile-nav.gif)
+
+- Remember that you should customize the design of the site and make it your own. Here's a guideline for what the site could look like:
+
+![](readme-assets/desktop.png)
+
+![](readme-assets/mobile.png)
 
 
-- Your process/approach.
-	Process, approach: First, I drew an outline of a site that meets all the min specs on piece of paper.
-	Second, I build the semantic HTML structure.
-- Unsolved problems.
-- Your biggest wins and challenges.
+
++++++++++++++++++++ overall goal +++++++++++
+[ ] Use semantic markup for HTML and CSS, adhering to best practices.
+[ ] Use Flexbox/Grid to create a multi-column layout.
+[ ] Be completely responsive.
+[ ] Include separate HTML/CSS/JavaScript files.
+[ ] Stick with the KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles.
+[ ] Use JavaScript or jQuery for DOM manipulation.
+[ ] Be deployed and accessible online.
+[ ] A `README.md` file with explanations of:
+  - Technologies used.
+  - Your process/approach.
+  - Unsolved problems.
+  - Your biggest wins and challenges.
+- Screenshots of the snippets of code you used to solve particularly interesting problems (think code highlights).
+- An in-class demo of the site that shows off the interactions you worked on.
+
+- A carousel whose images slide to the side on a timer, along with indicators that the user can click to navigate to a particular project.
+
+	![](readme-assets/carousel.gif)
+	- Use the internet to find great carousels! [BootStrap Version](https://getbootstrap.com/docs/4.0/components/carousel/) [Materialize Version](https://materializecss.com/carousel.html)
+-->
+
 
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Unit 1 Project Build an About Me Site
 ![direction]( https://git.generalassemb.ly/sf-wdi-51/project-00)
