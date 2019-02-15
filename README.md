@@ -8,7 +8,7 @@
 	4) JQuery, 
 	5) Bootstrap 4.0
 
-- Confession:
+- RoadBlocks and How I resolved them:
 Description: Here are some trouble I ran into and how I resolved them and some are still unsolved problems.
 	1) How to quickly jump to different section of the page:
 	![issue](https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2FJump%20to%20a%20section.png?1550218364372) 
@@ -17,6 +17,17 @@ Description: Here are some trouble I ran into and how I resolved them and some a
 
 	2) Smooth scrolling: after some research I found out 
 
+
+	3) How to set font-size and which unit to use?  
+	I decide to go with rem for overall body.  First set font-size: 62.5% which makes my percentage math really easy. Due to the default font-size = 16px.
+	62.5% of 16px = 10px.  This makes my Math for font rem % calculation really simple. (everything based on 10)  
+	Below explains in greater detail why.
+	![](https://medium.com/code-better/css-units-for-font-size-px-em-rem-79f7e592bb97)
+
+
+	4) Grid and flexbox
+	I wanted to make my site responsive therefore, I want to make it painless by using CSSGrid and flexbox.
+	
 
 - Your process/approach.
 	Process, approach: First, I drew an outline of a site that meets all the min specs on piece of paper.

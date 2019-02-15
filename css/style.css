@@ -1,0 +1,43 @@
+/* Color Palette 
+#333    - Very dark gray 80% black
+#444    - dark charcoal
+#fff    - white
+#337ab7 - blue
+#eee    - light grey
+#aeaeae - lighter grey
+#cecece - darker grey
+#e63636 - red
+#adadad - lighter grey
+rgba(31, 31, 31, 0.75) - graphite grey
+#129CF3 - BLUE
+#A9ADB0 - GREY
+#343434 - Very dark gray
+*/
+
+/* ======= Generic CSS =======  */
+html, body, main {
+  height: 100%;
+  width: 100%; 
+}
+/* catch all for overflow */
+img, embed, object, video {
+  max-width: 100%;
+}
+
+html {
+  /* box sizing to fit 2 col flex box
+   this ignores when calc the width of element
+  */
+  box-sizing: border-box;
+  /* makes the font size 10px in rem easy calculation 
+  browser overall font-size 16px > 16 * .625 = 10px
+  1.6 rem * 10px = 16px */
+  /* Usually default font-size of the browser is 16px. Setting font-size: 100% will make 1rem = 16px. But it will make calculations a little difficult. A better way is to set font-size: 62.5%. Because 62.5% of 16px is 10px. Which makes 1rem = 10px.
+  https://medium.com/code-better/css-units-for-font-size-px-em-rem-79f7e592bb97
+  */
+  font-size: 62.5%; /* 1em = 10px */
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* ----- end of  box sizing https://css-tricks.com/box-sizing/ ---- */
