@@ -41,3 +41,19 @@ html {
   box-sizing: inherit;
 }
 /* ----- end of  box sizing https://css-tricks.com/box-sizing/ ---- */
+body {
+  height: 100%;
+}
+#landing-page {
+  /* transform: translate(50%, 50%); */
+  height: 100%;
+  display: block;
+}
+h1, h2 {
+  /* center it */
+  margin: 0 auto;
+  font-size: 30px;
+}
+h2 {
+  font-size: 20px;
+}

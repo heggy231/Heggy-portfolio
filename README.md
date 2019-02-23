@@ -1,12 +1,11 @@
 
 
-- A `README.md` file with explanations of:
-  - Technologies used.
-	1) HTML5, 
-	2) CSS, 
-	3) JavaScript, 
-	4) JQuery, 
-	5) Bootstrap 4.0
+### A `README.md` file with explanations of Technologies used.
+	- HTML5, 
+	- CSS, 
+	- JavaScript, 
+	- JQuery, 
+	- Bootstrap 4.0
 
 - RoadBlocks and How I resolved them:
 Description: Here are some trouble I ran into and how I resolved them and some are still unsolved problems.
