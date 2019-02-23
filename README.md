@@ -1,4 +1,7 @@
 
+# links 
+requirement: https://git.generalassemb.ly/sf-wdi-51/project-00
+flexbox: https://git.generalassemb.ly/sf-wdi-51/css-flexbox
 
 ### A `README.md` file with explanations of Technologies used.
 	- HTML5, 
@@ -24,22 +27,23 @@ Description: Here are some trouble I ran into and how I resolved them and some a
 	![](https://medium.com/code-better/css-units-for-font-size-px-em-rem-79f7e592bb97)
 
 
-	4) Grid and flexbox
-	I wanted to make my site responsive therefore, I want to make it painless by using CSSGrid and flexbox.
-	
+	4) nav bar to stick
+https://codepen.io/heggy231/pen/KJONWX
+	I used flex space between
 
 - Your process/approach.
 	Process, approach: 
 	- First, I found a site that I like use that site as my wireframe.
 	<img src="https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2Fthumbnails%2FScreen%20Shot%202019-02-23%20at%2012.01.12%20AM.png?1550909129152" alt="landing pg fox robot ex site">
 	<img src="https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2Fthumbnails%2FScreen%20Shot%202019-02-23%20at%2012.00.55%20AM.png?1550909133344" alt="nav bar and site general feel">
+
 	- Second, I build the semantic HTML structure.
 - Unsolved problems.
 - Your biggest wins and challenges.
 #### challenges: 
 - I want the nav bar hover to fill in all the space so I put div around it and added padding to get some space.
-<img src="https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2Fthumbnails%2FScreen%20Shot%202019-02-22%20at%2011.58.42%20PM.png?1550908757222" alt="navbar hover color" width="100%">
-<img src="https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2Fthumbnails%2FScreen%20Shot%202019-02-22%20at%2011.53.19%20PM.png?1550908755896" alt="navbar html code">
+<img src="https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2Fthumbnails%2FScreen%20Shot%202019-02-22%20at%2011.58.42%20PM.png?1550908757222" alt="navbar hover color" width="60%">
+<img src="https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2Fthumbnails%2FScreen%20Shot%202019-02-22%20at%2011.53.19%20PM.png?1550908755896" alt="navbar html code" width="60%">
 
 
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Unit 1 Project Build an About Me Site

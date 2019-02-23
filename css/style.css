@@ -44,10 +44,16 @@ img, embed, object, video {
 }
 /* ----- end of  box sizing https://css-tricks.com/box-sizing/ ---- */
 html, body, main {
-  height: 100%;
+  /* 100% of height of viewport
+  https://youtu.be/wBlBTO7mqoI?t=659 
+    always put body 100vh, margin: 0 when starting project
+  */
+  min-height: 100vh;
   width: 100%;
   font-family: 'Shadows Into Light', cursive;
   font-size: 1.2rem;
+  /* center things */
+  margin: 0 auto;
 }
 body {
   height: 100%;
@@ -88,6 +94,11 @@ body {
 .top-level-wrapper-flex {
   display:flex;
   flex-direction: column;
+  /* where do I want my main axis to be here I want centered 
+  https://youtu.be/wBlBTO7mqoI?t=1050
+  */
+  /* use outline when testing this doesn't takce up any space! */
+  /* outline: 3px red; */
   justify-content: center;
   align-items: center;
 }
@@ -142,6 +153,8 @@ body {
 .nav-wrapper-flex {
   overflow: hidden;
   display: flex;
+  /* how much each flex item div will grown relative to rest */
+  justify-content: space-between;
 }
 
 /* Navbar links */
@@ -149,10 +162,19 @@ body {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+
 }
 .nav-wrapper-flex div a {
-  /* adding padidng so that when hover background color covers whole thing  */
+  /* adding padding so that when hover background color covers whole thing  */
   padding: 0 1rem;
+}
+.sticky-nav {
+  position: fixed;
+  top:0;
+  width: 100vw;
+}
+.sticky , main {
+  padding-top: 3rem;
 }
 
 /* Headings
@@ -165,8 +187,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Gloria Hallelujah', cursive;
 }
 
-/* Text Styles
-   ================================================================ */
+
 
 a {
   /* transition: all 1s; */
@@ -176,7 +197,10 @@ a {
 a:hover {
   /* color: #F2F6D0; LIGHT GOLDENROD YELLOW */
   background-color: #D8D5DB; /* GAINSBORO*/
+  /* rounded hover highlite */
+  border-radius: 1rem;
 }
+
 /* Parallax Scrolling Effect */
 /* https://www.youtube.com/watch?v=d34GsFz-HkY&feature=youtu.be */
 /* 
