@@ -9,26 +9,34 @@
   <title>Portfolio | Heggy Castañeda</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2Fme.jpeg?1550895237146" type="image/x-icon">
   
 </head>
 <body>
-  <header id="home">
-    <div id="landing-page">
-      <h1>Heggy Castañeda</h1>
-      <h2>Learn more about her</h2>
-    </div>
-
-
-    <nav>
-      <ul>
+  <header id="home"></header>
+    <nav class="nav-wrapper">
         <!-- href, id match so it can jump -->
-        <li><a href="home"></a>home</li>
-        <li><a href="project"></a>project</li>
-        <li><a href="volunteer"></a>volunteer</li>
-        <li><a href="reference"></a>reference</li>
-        <li><a href="contact"></a>contact</li>
-      </ul>
-    </nav>
+        <a href="home">home</a> | 
+        <a href="project">project</a> | 
+        <a href="volunteer">volunteer</a> |
+        <a href="reference">reference</a> |
+        <a href="contact">contact</a> |
+    </nav><!-- end of nav-wrapper -->
+
+    <div id="landing-page">
+      <div class="top-level-wrapper">
+        <div id="top-level">
+          <h1>Heggy Castañeda</h1>
+        </div>
+        <div id="lower-level">
+          <h2>Learn more about her</h2>
+        </div>
+      </div>
+    </div>
+  </header> 
+
+
+
     <main>
       <section id="project">
         <h3>Projects that solved problems</h3>
@@ -69,6 +77,6 @@
     <footer id="social">
         <i class="fab fa-linkedin-in"></i> |
     </footer>
-  </header>
+
 </body>
 </html>
