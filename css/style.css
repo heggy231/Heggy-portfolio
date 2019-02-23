@@ -1,32 +1,28 @@
 /* Color Palette 
-#333    - Very dark gray 80% black
-#444    - dark charcoal
-#fff    - white
-#337ab7 - blue
-#eee    - light grey
-#aeaeae - lighter grey
-#cecece - darker grey
-#e63636 - red
-#adadad - lighter grey
-rgba(31, 31, 31, 0.75) - graphite grey
-#129CF3 - BLUE
-#A9ADB0 - GREY
-#343434 - Very dark gray
+https://coolors.co/848fa5-f2f6d0-474747-ebf2fa-829191
+sweet pea https://coolors.co/ac92a6-7a918d-d8d5db-eae8ff-d2d5dd
+#474747: OUTER SPACE 
+#F2F6D0: LIGHT GOLDENROD YELLOW
+#EAE8FF: GLITTER 
+#D8D5DB: GAINSBORO
+
+google font custom fonts
+font-family: 'Shadows Into Light', cursive; (fun)
+font-family: 'Gloria Hallelujah', cursive; (fun thick)
+
 */
+/* ==========================================================================
+   Global Overrides
+  ========================================================================== */
+/* ==========================================================================
+  custom styles
+  ========================================================================== */
 
-/* ======= Generic CSS =======  */
-html, body, main {
-  height: 100%;
-  width: 100%; 
-}
-/* catch all for overflow */
-img, embed, object, video {
-  max-width: 100%;
-}
-
+/* Global
+   ================================================================ */
 html {
   /* box sizing to fit 2 col flex box
-   this ignores when calc the width of element
+    this ignores when calc the width of element
   */
   box-sizing: border-box;
   /* makes the font size 10px in rem easy calculation 
@@ -36,47 +32,164 @@ html {
   https://medium.com/code-better/css-units-for-font-size-px-em-rem-79f7e592bb97
   */
   font-size: 62.5%; /* 1em = 10px */
+  color: #474747; /* OUTER SPACE */
+  background-color: #EBF2FA; /* ANTI-FLASH WHITE */
+}
+/* catch all for overflow */
+img, embed, object, video {
+  max-width: 100%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 /* ----- end of  box sizing https://css-tricks.com/box-sizing/ ---- */
+html, body, main {
+  height: 100%;
+  width: 100%;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.2rem;
+}
 body {
   height: 100%;
 }
-/* ####### centered name as my landing page Goal: I want my name to centered on the page ######### */
-#landing-page {
+/* Layout
+   ================================================================ */
+/* ####### centered name on landing page ######### */
+/* https://git.generalassemb.ly/sf-wdi-51/css-flexbox#flexbox-to-the-rescue 
+   https://codepen.io/heggy231/pen/omKxwr
+*/
+#landing-page-flex {
   /* transform: translate(50%, 50%); */
   height: 100vh;
-  width: 100vw;
-  display: block;
-  margin: 0 auto;
+  /* width: 100vw; */
   display:flex;
+  margin: 0 auto;
   /* flex direction default is row so set it column */
   flex-direction: column;
   /* text is center */
   justify-content: center;
+  align-items: center;
 }
-.top-level-wrapper {
-  text-align: center;
+
+/* Arrow down indication for more content below */
+/* https://git.generalassemb.ly/ga-wdi-lessons/css-animations 
+ * keyframe animations: 
+ * To keyframe animate a CSS element, we need two components - the animation structure itself, and then a call to the animation with specific instructions. 
+ * https://webdesign.tutsplus.com/articles/15-inspiring-examples-of-css-animation-on-codepen--cms-23937
+ * https://www.w3schools.com/css/css3_animations.asp
+
+ */
+/* [x] little arrow bounce 
+      [x] bouncing arrow
+        - https://codepen.io/bisaillonyannick/pen/pvZeGg
+
+        - https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name
+*/
+.top-level-wrapper-flex {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+.arrow-point-down {
+  /*arrow */
+  
+}
+
+/* to animate: 1) call the animation name, 2) set keyframes time and (x,y) coordinates*/
+.bouncy {
+  -webkit-animation-name: bounce;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: bounce;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+/* tell css how bounce will behave */
+/* @keyframes bounce {
+  0% {
+    transform: translate(0, 0)
+  } */
+  /* https://css-tricks.com/css-keyframe-animation-delay-iterations/ 
+   https://css-tricks.com/almanac/properties/a/animation/
+  */
+@keyframes bounce {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(0, 4rem);
+  }
+  60% {
+    transform: translate(0, 0);
+  }
+  80% {
+    transform: translate(0, 2rem);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
 /* ###### sticky nav bar ######## */
-.nav-wrapper ul {
+/* https://git.generalassemb.ly/sf-wdi-51/css-flexbox#problem-2-make-the-footer-stick */
+.nav-wrapper-flex {
   overflow: hidden;
   display: flex;
 }
 
 /* Navbar links */
-.nav-wrapper ul a {
+.nav-wrapper-flex div {
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
+}
+.nav-wrapper-flex div a {
+  /* adding padidng so that when hover background color covers whole thing  */
+  padding: 0 1rem;
 }
 
+/* Headings
+   ================================================================ */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+#top-level {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+/* Text Styles
+   ================================================================ */
+
+a {
+  /* transition: all 1s; */
+  text-decoration: none;
+  color: #474747;
+}
+a:hover {
+  /* color: #F2F6D0; LIGHT GOLDENROD YELLOW */
+  background-color: #D8D5DB; /* GAINSBORO*/
+}
 /* Parallax Scrolling Effect */
 /* https://www.youtube.com/watch?v=d34GsFz-HkY&feature=youtu.be */
 /* 
 [ ] find cool 2 img - background img credit: natbg.com
 https://www.maxpixel.net/Coral-Volcanic-Rock-Background-Great-Adventure-3062014
 [ ] add parallex effect page
+
 */
 
+
+/* Footer
+   ================================================================ */
+footer {
+  clear: both;
+  color: #bbb;
+}

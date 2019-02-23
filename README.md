@@ -33,6 +33,10 @@ Description: Here are some trouble I ran into and how I resolved them and some a
 	Second, I build the semantic HTML structure.
 - Unsolved problems.
 - Your biggest wins and challenges.
+#### challenges: 
+- I want the nav bar hover to fill in all the space but at first it used to 
+<img src="https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2Fthumbnails%2FScreen%20Shot%202019-02-22%20at%2011.58.42%20PM.png?1550908757222" alt="navbar hover color">
+
 
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Unit 1 Project Build an About Me Site
 ![direction]( https://git.generalassemb.ly/sf-wdi-51/project-00)
