@@ -45,6 +45,7 @@ https://codepen.io/heggy231/pen/KJONWX
 <img src="https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2Fthumbnails%2FScreen%20Shot%202019-02-22%20at%2011.58.42%20PM.png?1550908757222" alt="navbar hover color" width="60%">
 <img src="https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2Fthumbnails%2FScreen%20Shot%202019-02-22%20at%2011.53.19%20PM.png?1550908755896" alt="navbar html code" width="60%">
 
+challenges: forgetting to add script in my html
 
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Unit 1 Project Build an About Me Site
 ![direction]( https://git.generalassemb.ly/sf-wdi-51/project-00)

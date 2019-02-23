@@ -148,8 +148,8 @@ body {
   }
 }
 
-/* ###### sticky nav bar ######## */
-/* https://git.generalassemb.ly/sf-wdi-51/css-flexbox#problem-2-make-the-footer-stick */
+/* ###### creating nav bar using flex ######## */
+
 .nav-wrapper-flex {
   overflow: hidden;
   display: flex;
@@ -168,14 +168,27 @@ body {
   /* adding padding so that when hover background color covers whole thing  */
   padding: 0 1rem;
 }
+
+/* ###### sticky nav bar ######## */
+/* https://git.generalassemb.ly/sf-wdi-51/css-flexbox#problem-2-make-the-footer-stick 
+
+w3 https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prop_element_offsettop_sticky
+*/
+
 .sticky-nav {
   position: fixed;
   top:0;
   width: 100vw;
 }
-.sticky , main {
+
+/* Add cushion for smooth movement (as the navigation bar becomes sticky to the top (position:fixed and top:0) */
+.sticky, main {
   padding-top: 3rem;
 }
+
+
+
+
 
 /* Headings
    ================================================================ */
