@@ -1,4 +1,7 @@
-/* apply a natural box layout model to all elements, but allowing components to change */
+/* not grid but floated with clear fix 2 columns https://codepen.io/heggy231/pen/qgevLq */
+/* apply a natural box layout model to all elements, but allowing components to change 
+
+*/
 html {
   box-sizing: border-box;
 }
@@ -8,14 +11,30 @@ html {
 .row, .column {
 
 }
+/* explicitly define our column widths so that they also include border and padding. */
 .row {
   border: 1px solid #474747;
+  box-sizing: border-box;
 }
 .column {
   border: 1px solid #ff0000;
+  box-sizing: border-box;
 }
+
+
+/* clearfix keeps following elements to come inside of floated elements */
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+/* Our columns will handle page width */
 .column {
   float: left;
 }
 
-
+/* 
+- Set column widths. We don't necessarily want our column widths to be defined by their content.
+- Define total width. In any scenario, we want our total grid width to cover the entire page.
+- Give everything some space. Our grid will look better if we give our rows and columns some breathing room.
+*/

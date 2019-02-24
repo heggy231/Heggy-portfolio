@@ -23,6 +23,8 @@ html {
   box-sizing: inherit;
 }
 /* ----- end of  box sizing https://css-tricks.com/box-sizing/ ---- */
+
+/* clearfix keeps following elements to come inside of floated elements */
 .clearfix:after {
   display: table;
   clear: both;

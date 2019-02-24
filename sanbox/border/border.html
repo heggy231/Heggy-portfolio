@@ -44,6 +44,20 @@
       padding: 2em;
       background: #eee;
     }
+    .section-wrapper {
+      max-width: 100%;
+    }
+    .section-wrapper-item {
+      float: left;
+      width: 42%;
+      text-align: center;
+      margin-left: 1.7em;
+    }
+    .clearfix:after {
+      display: table;
+      clear: both;
+      content: "";
+    }
   </style>
 </head>
 <body>
@@ -56,8 +70,16 @@
 	  </nav>
 	</header>
 
-	<div>
-	  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto commodi aspernatur quae possimus! Veritatis ad libero maiores. Assumenda quae <a href="#">perspiciatis</a> dolore voluptatem porro optio eos, nemo et eligendi, voluptatum necessitatibus.</p>
-	</div>
+  <!-- clearfix push the footer away from section elements even though floating -->
+  <section class="section-wrapper clearfix">
+    <div class="section-wrapper-item ">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto commodi aspernatur quae possimus! Veritatis ad libero maiores. Assumenda quae <a href="#">perspiciatis</a> dolore voluptatem porro optio eos, nemo et eligendi, voluptatum necessitatibus.</p>
+    </div>
+    
+    <div class="section-wrapper-item">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto commodi aspernatur quae possimus! Veritatis ad libero maiores. Assumenda quae <a href="#">perspiciatis</a> dolore voluptatem porro optio eos, nemo et eligendi, voluptatum necessitatibus.</p>
+    </div>
+  </section>
+  <footer>Let's finish this together</footer>
 </body>
 </html>
