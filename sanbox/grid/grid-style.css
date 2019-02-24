@@ -48,9 +48,9 @@ videos for csss https://git.generalassemb.ly/sf-wdi-51/css-selector-basics#video
   float: left;
   position: relative;
   border: 2px solid tomato;
+  /* make the corner rounded */
   border-radius: 20px;
   text-align: center;
-
 }
 /* https://git.generalassemb.ly/sf-wdi-51/css-selector-basics#direct-child-selectors 
 Filter out only first-generation child tags.
