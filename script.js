@@ -1,6 +1,10 @@
-// when user scrolls fire scrollPosDetect()
+// Put all the function inside of my doc.ready so all the dOM elements
+//  are created so that my jQuery works correctly!
+
 $(document).ready(function () {
   console.log( "document loaded and ready!" );
+  // when user scrolls fire scrollPosDetect() so that my nav bar
+  //   is sticky on top my page
   window.onscroll = function() {
     // is my onscroll getting called?
     // debugger;
@@ -12,15 +16,14 @@ $(document).ready(function () {
   $(".fas.fa-bars").click(function() {
     // debugger;
     console.log(`hamburger menu clicked`);
-    // grab the nav container and toggle
+    // grab the nav container and toggle to show/hide
     $(".nav-wrapper-flex").toggle();
     $(".hamburger-nav-bar").toggle();
   });
 
-  // Add set time out to my showHideWhichTestimony() so user sees my 
-  //  testimony sliding automatically resr: https://www.w3schools.com/jsref/met_win_settimeout.asp
-  // donot call with showHideWhichTestimony() since it is a call back it will stack overflow
-  setTimeout(showHideWhichTestimony, 5000);
+  // testimoy to slide with SetTimeout method eve 5sec
+  showHideWhichTestimony();
+
 }); // end of (document).ready
 
 
@@ -40,13 +43,19 @@ function makePanelStick() {
   }
 }
 
-// testimonyState is global variable and I want access to this
+// ########## testimonyState setTimeOut method function starts here is global variable so that I can reassign value 1,2,0,1,2.... ###########
 var testimonialArray = $("#testimonial-flex-wrapper > div");
 var testimonyState = 0;
 function showHideWhichTestimony() {
   // start at testimony[0] default is show, put testimonyState to go 1,2,0,1,2,0...
   //  first run of my showHideWhichTestimony(), testimonyState is 1
+  //  second run testimonyState is 2 (2/3 mod is 2)
+  //  Cheatsheet for modulus: if a%b if a < b then answer: a
+  //                          if a%b if a = b then answer: 0
   testimonyState = (testimonyState + 1) % testimonialArray.length; 
+  // testimonialArray.length is 3 
+  // Main goal of this for loop is get one $(testimonialArray[i]).show()
+  //  and everything else to hide()
   for (var i = 0; i < testimonialArray.length; i++) {
     if ( i === testimonyState ) {
       // convert DOM $("#testimonial-flex-wrapper div")[0] 
@@ -58,6 +67,10 @@ function showHideWhichTestimony() {
       $(testimonialArray[i]).hide()
     }
   }
+  // 5sec later call showHideWhichTestimony() again using setTimeout() method
+  //  testimony sliding automatically resr: https://www.w3schools.com/jsref/met_win_settimeout.asp
+  // donot call with showHideWhichTestimony() since it is a call back it will stack overflow crash window.  setTimeOut only call 5seonds from now only once. and it gets called when my 
+  // Then I need to put it in my function 
   setTimeout(showHideWhichTestimony, 5000);
 }
 

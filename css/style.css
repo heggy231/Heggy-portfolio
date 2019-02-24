@@ -325,4 +325,9 @@ footer {
   .nav-wrapper-flex {
     display: none;
   }
+
+  /* for grid https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_breakpoints */
+  .testi-grid-col-half {
+    width: 99%;
+  }
 }
