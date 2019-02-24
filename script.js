@@ -17,7 +17,10 @@ $(document).ready(function () {
     $(".hamburger-nav-bar").toggle();
   });
 
-
+  // Add set time out to my showHideWhichTestimony() so user sees my 
+  //  testimony sliding automatically resr: https://www.w3schools.com/jsref/met_win_settimeout.asp
+  // donot call with showHideWhichTestimony() since it is a call back it will stack overflow
+  setTimeout(showHideWhichTestimony, 5000);
 }); // end of (document).ready
 
 
@@ -38,19 +41,23 @@ function makePanelStick() {
 }
 
 // testimonyState is global variable and I want access to this
+var testimonialArray = $("#testimonial-flex-wrapper > div");
 var testimonyState = 0;
 function showHideWhichTestimony() {
-  testimonyState = (testimonyState + 1) % testimonialArray.length; // this will 1,2,0,1,2,0 loop  first testimonyState is 1
+  // start at testimony[0] default is show, put testimonyState to go 1,2,0,1,2,0...
+  //  first run of my showHideWhichTestimony(), testimonyState is 1
+  testimonyState = (testimonyState + 1) % testimonialArray.length; 
   for (var i = 0; i < testimonialArray.length; i++) {
     if ( i === testimonyState ) {
       // convert DOM $("#testimonial-flex-wrapper div")[0] 
       //  into jQuery obj by wrapping $() once more
       //  $($("#testimonial-flex-wrapper div")[0])
-      testimonialArray[i].show()
+      $(testimonialArray[i]).show()
     } else {
-      // first run i = 0, testimony = 1.  My first testimony will toggle to hide.
-      testimonialArray[i].hide()
+      // first run i = 0, testimony = 1.  My first testimony[0] will toggle to hide.
+      $(testimonialArray[i]).hide()
     }
   }
+  setTimeout(showHideWhichTestimony, 5000);
 }
 
