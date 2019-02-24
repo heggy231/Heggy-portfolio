@@ -6,6 +6,7 @@ sweet pea https://coolors.co/ac92a6-7a918d-d8d5db-eae8ff-d2d5dd
 #EAE8FF: GLITTER 
 #D8D5DB: GAINSBORO
 #D2D5DD: LIGHT GRAY
+#EBF2FA: ANTI-FLASH WHITE
 google font custom fonts
 font-family: 'Shadows Into Light', cursive; (fun)
 font-family: 'Gloria Hallelujah', cursive; (fun thick)
@@ -256,26 +257,54 @@ https://www.maxpixel.net/Coral-Volcanic-Rock-Background-Great-Adventure-3062014
 /* Grid why I started coding */
 /* https://git.generalassemb.ly/sf-wdi-51/wireframes-layouts-grid-systems#introduction-grids */
 
-/* Filter out only first-generation child tags grid-column.
+/* Filter out only first-generation child tags grid-column.  But no nested ones (second-gen) doesn't get picked!!
 section > .grid-column */
-section > .grid-column {
+section .grid-column {
   padding: 15px;
+  background-color: #EBF2FA;
+  
 }
 /* But changing padding wouldn't make a difference since box-sizing is set to border-box
    Add border to see where my col sits
 */
+/* for my parent grid container I add clearfix to keep following elements not intrude into my grid system */
 .grid-row {
   margin: .5%;  /* Question:  why right side doesn't get margin??? */
+  /* put border around my row during testing */
   border: 1px dotted slateblue;
 }
 .grid-column {
+  /* lets make col to float */
+  float: left;
   margin: .5%;
+  position: relative;
+  /* put border around my col during testing */
   border: 1px solid slategray;
   border-radius: 15px; /* make my box round edge*/
+  /* I put center text-align to my main section already. so just inherit it please */
   text-align: inherit;
 }
-
-/* (n / 12) * 100 = 2/12 * 100 =  16.66% */
+/* set my kid col to take up hal of parent row grid container */
+.testi-grid-col-half {
+  width: 49%; /* remeber I added margin .5 on this col so I need to minu 1% (left, right) it can't be 50% here*/
+}
+/*
+cheatsheet for grid calc for all dimension
+Remember, all grid must equal to 12 in total 
+.column-1 { width: 8.33%; }
+.column-2 { width: 16.66%; }
+.column-3 { width: 25%; }
+.column-4 { width: 33.33%; }
+.column-5 { width: 41.66%; }
+.column-6 { width: 50%; }
+.column-7 { width: 58.33%; }
+.column-8 { width: 66.66%; }
+.column-9 { width: 75%; }
+.column-10 { width: 83.33%; }
+.column-11 { width: 91.66%; }
+.column-12 { width: 100%; }
+*/
+/* (n / 12) * 100 = 6/12 * 100 =  16.66% */
 
 
 
