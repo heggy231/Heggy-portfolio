@@ -1,4 +1,7 @@
 /* not grid but floated with clear fix 2 columns https://codepen.io/heggy231/pen/qgevLq */
+/* 
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_two_columns_responsive
+*/
 /* apply a natural box layout model to all elements, but allowing components to change 
 
 */
@@ -37,4 +40,36 @@ html {
 - Set column widths. We don't necessarily want our column widths to be defined by their content.
 - Define total width. In any scenario, we want our total grid width to cover the entire page.
 - Give everything some space. Our grid will look better if we give our rows and columns some breathing room.
+videos for csss https://git.generalassemb.ly/sf-wdi-51/css-selector-basics#videos
 */
+
+/* header .middle and footer selectors some explicit padding and heights. */
+.column {
+  float: left;
+  position: relative;
+  border: 2px solid tomato;
+  border-radius: 20px;
+  text-align: center;
+
+}
+/* https://git.generalassemb.ly/sf-wdi-51/css-selector-basics#direct-child-selectors 
+Filter out only first-generation child tags.
+header > .column
+Styles all <p> tags that are direct, first-generation descendants of <main> tags
+ main > p {}
+*/
+header > .column, footer > .column {
+  padding: 25px;
+}
+
+.middle > .column {
+
+}
+
+header nav {
+
+}
+
+nav a {
+
+}
