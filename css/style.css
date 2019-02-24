@@ -46,6 +46,20 @@ img, embed, object, video {
   max-width: 100%;
 }
 
+a {
+  font-weight: bold;
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  /* color: #F2F6D0; LIGHT GOLDENROD YELLOW */
+  background-color: #D8D5DB; /* GAINSBORO*/
+  /* rounded hover highlite */
+  border-radius: 1rem;
+  text-decoration: none;
+}
+
 html, body, main {
   /* 100% of height of viewport
   https://youtu.be/wBlBTO7mqoI?t=659 
@@ -198,18 +212,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Gloria Hallelujah', cursive;
 }
 
-a {
-  /* transition: all 1s; */
-  text-decoration: none;
-  color: #474747;
-}
-a:hover {
-  /* color: #F2F6D0; LIGHT GOLDENROD YELLOW */
-  background-color: #D8D5DB; /* GAINSBORO*/
-  /* rounded hover highlite */
-  border-radius: 1rem;
-  text-decoration: none;
-}
 
 /* Parallax Scrolling Effect */
 /* https://www.youtube.com/watch?v=d34GsFz-HkY&feature=youtu.be */
@@ -235,13 +237,30 @@ https://www.maxpixel.net/Coral-Volcanic-Rock-Background-Great-Adventure-3062014
   
 }
 
-#testimonial-flex-wrapper div{
+#testimonial-flex-wrapper div {
   text-align: center;
 }
 
-#testimonial-2, #testimonial-3{
+#testimonial-2, #testimonial-3 {
   display: none;
 }
+
+.h3wrapper-flex {
+  display: flex;
+  justify-content: center;
+}
+
+/* Grid why I started coding */
+/* https://git.generalassemb.ly/sf-wdi-51/wireframes-layouts-grid-systems#introduction-grids */
+.why-grid-parentContainer {
+  display: grid;
+  width: 100vw;
+}
+.why-grid-child {
+  width: 50vw;
+  display: float;
+}
+
 /* Footer
    ================================================================ */
 footer {

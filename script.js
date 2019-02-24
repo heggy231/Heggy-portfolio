@@ -43,9 +43,12 @@ function showHideWhichTestimony() {
   testimonyState = (testimonyState + 1) % testimonialArray.length; // this will 1,2,0,1,2,0 loop  first testimonyState is 1
   for (var i = 0; i < testimonialArray.length; i++) {
     if ( i === testimonyState ) {
+      // convert DOM $("#testimonial-flex-wrapper div")[0] 
+      //  into jQuery obj by wrapping $() once more
+      //  $($("#testimonial-flex-wrapper div")[0])
       testimonialArray[i].show()
     } else {
-      // first run i = 0, testimony = 1.  My first testimony will toggle to hide
+      // first run i = 0, testimony = 1.  My first testimony will toggle to hide.
       testimonialArray[i].hide()
     }
   }
