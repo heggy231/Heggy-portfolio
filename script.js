@@ -43,6 +43,11 @@ function makePanelStick() {
   }
 }
 
+// ########## carousel setTimeOut method function starts here is global variable so that I can reassign value 1,2,0,1,2.... ###########
+var myCarouselProjectArray = $(".mycarousel-container > div");
+
+
+
 // ########## testimonyState setTimeOut method function starts here is global variable so that I can reassign value 1,2,0,1,2.... ###########
 var testimonialArray = $("#testimonial-flex-wrapper > div");
 var testimonyState = 0;

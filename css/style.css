@@ -271,7 +271,7 @@ section .grid-column {
 .grid-row {
   margin: .5%;  /* Question:  why right side doesn't get margin??? */
   /* put border around my row during testing */
-  border: 1px dotted slateblue;
+  /* border: 1px dotted slateblue; */
 }
 .grid-column {
   /* lets make col to float */
@@ -279,18 +279,21 @@ section .grid-column {
   margin: .5%;
   position: relative;
   /* put border around my col during testing */
-  border: 1px solid slategray;
-  border-radius: 15px; /* make my box round edge*/
+  /* border: 1px solid slategray; */
+  /* border-radius: 15px; make my box round edge */
   /* I put center text-align to my main section already. so just inherit it please */
   text-align: inherit;
 }
 /* set my kid col to take up hal of parent row grid container */
 .testi-grid-col-half {
-  width: 49%; /* remeber I added margin .5 on this col so I need to minu 1% (left, right) it can't be 50% here*/
+  width: 49%; /* remember I added margin .5 on this col so I need to minu 1% (left, right) it can't be 50% here*/
 }
 /*
 cheatsheet for grid calc for all dimension
 Remember, all grid must equal to 12 in total 
+Also if you added margin to the column take that amount out
+    from the 100% width!! 
+
 .column-1 { width: 8.33%; }
 .column-2 { width: 16.66%; }
 .column-3 { width: 25%; }
@@ -306,7 +309,13 @@ Remember, all grid must equal to 12 in total
 */
 /* (n / 12) * 100 = 6/12 * 100 =  16.66% */
 
-
+/* ########## caroussel ########### */
+.mycarousel-container {
+  
+}
+.mycarousel-item {
+  width: 24%;
+}
 
 /* Footer
    ================================================================ */
