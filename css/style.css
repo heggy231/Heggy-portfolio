@@ -5,26 +5,32 @@ sweet pea https://coolors.co/ac92a6-7a918d-d8d5db-eae8ff-d2d5dd
 #F2F6D0: LIGHT GOLDENROD YELLOW
 #EAE8FF: GLITTER 
 #D8D5DB: GAINSBORO
-
+#D2D5DD: LIGHT GRAY
 google font custom fonts
 font-family: 'Shadows Into Light', cursive; (fun)
 font-family: 'Gloria Hallelujah', cursive; (fun thick)
 
 */
-/* ==========================================================================
-   Global Overrides
-  ========================================================================== */
-/* ==========================================================================
-  custom styles
-  ========================================================================== */
 
-/* Global
+/* Global overrides
    ================================================================ */
+
+/* box sizing */
 html {
-  /* box sizing to fit 2 col flex box
-    this ignores when calc the width of element
-  */
   box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* ----- end of  box sizing https://css-tricks.com/box-sizing/ ---- */
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+html {
+
   /* makes the font size 10px in rem easy calculation 
   browser overall font-size 16px > 16 * .625 = 10px
   1.6 rem * 10px = 16px */
@@ -39,10 +45,7 @@ html {
 img, embed, object, video {
   max-width: 100%;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-/* ----- end of  box sizing https://css-tricks.com/box-sizing/ ---- */
+
 html, body, main {
   /* 100% of height of viewport
   https://youtu.be/wBlBTO7mqoI?t=659 
@@ -57,6 +60,7 @@ html, body, main {
 }
 body {
   height: 100%;
+  /* margin: 0 1rem; */
 }
 /* Layout
    ================================================================ */
@@ -102,10 +106,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.arrow-point-down {
-  /*arrow */
-  
-}
+
 
 /* to animate: 1) call the animation name, 2) set keyframes time and (x,y) coordinates*/
 .bouncy {
@@ -149,12 +150,13 @@ body {
 }
 
 /* ###### creating nav bar using flex ######## */
-
 .nav-wrapper-flex {
   overflow: hidden;
   display: flex;
   /* how much each flex item div will grown relative to rest */
   justify-content: space-between;
+  background-color: rgba(210, 213, 221, 0.6) /* light gray with transp*/
+
 }
 
 /* Navbar links */
@@ -162,7 +164,7 @@ body {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-
+  border: solid, #474747 !important;
 }
 .nav-wrapper-flex div a {
   /* adding padding so that when hover background color covers whole thing  */
@@ -186,10 +188,6 @@ w3 https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prop_element_offs
   padding-top: 3rem;
 }
 
-
-
-
-
 /* Headings
    ================================================================ */
 h1, h2, h3, h4, h5, h6 {
@@ -199,8 +197,6 @@ h1, h2, h3, h4, h5, h6 {
 #top-level {
   font-family: 'Gloria Hallelujah', cursive;
 }
-
-
 
 a {
   /* transition: all 1s; */
@@ -212,6 +208,7 @@ a:hover {
   background-color: #D8D5DB; /* GAINSBORO*/
   /* rounded hover highlite */
   border-radius: 1rem;
+  text-decoration: none;
 }
 
 /* Parallax Scrolling Effect */
@@ -223,10 +220,43 @@ https://www.maxpixel.net/Coral-Volcanic-Rock-Background-Great-Adventure-3062014
 
 */
 
+/* hamburger menu */
 
+.hamburger-nav-bar {
+  display: none;
+}
+.hamburger-menu-icon {
+  display: none !important;
+}
+/* Testimonial */
+#testimonial-flex-wrapper {
+  display: flex;
+  justify-content: center;
+  
+}
+
+#testimonial-flex-wrapper div{
+  text-align: center;
+}
+
+#testimonial-2, #testimonial-3{
+  display: none;
+}
 /* Footer
    ================================================================ */
 footer {
   clear: both;
   color: #bbb;
+  display: flex;
+  justify-content: center;
+}
+
+/* when viewport width is 690px or less do this*/
+@media only screen and (max-width: 690px) {
+  .hamburger-menu-icon {
+    display: block !important;
+  }
+  .nav-wrapper-flex {
+    display: none;
+  }
 }

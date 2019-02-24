@@ -45,54 +45,71 @@
   <nav class="nav-wrapper-flex">
       <!-- href, id match so it can jump -->
       <!-- wrap the links so it is display: block -->
-      <div><a href="home">home</a></div> | 
-      <div><a href="project">project</a></div> | 
-      <div><a href="volunteer">volunteer</a></div> |
-      <div><a href="reference">reference</a></div> |
-      <div><a href="contact">contact</a></div>
+      <div><a href="#home">home</a></div> 
+      <div><a href="#project">project</a></div> 
+      <div><a href="#reference">reference</a></div>
+      <div><a href="#contact">contact</a></div>
   </nav><!-- end of nav-wrapper -->
+  <!-- hamburger menu -->
+  <i class="fas fa-bars hamburger-menu-icon"></i>
+  <div class="hamburger-nav-bar">
+    <nav>
+        <div><a href="#home">home</a></div> 
+        <div><a href="#project">project</a></div>
+        <div><a href="#reference">reference</a></div>
+        <div><a href="#contact">contact</a></div>
+    </nav><!-- end of nav-wrapper -->
+  </div>
+  <main>
+    <section id="project">
+      <h3>Projects that solved problems</h3>
 
-    <main>
-      <section id="project">
-        <h3>Projects that solved problems</h3>
+      <!-- carousel -->
+      <!-- https://getbootstrap.com/docs/4.0/components/carousel/#with-captions -->
+      <div class="carousel-item">
+        <img src="./image/restapplg.png" alt="restaurant review">
+        <!-- when user click go pop out and  -->
+        <!--  <a href="https://wizardly-albattani-92f76c.netlify.com/"></a> -->
+        <!-- hide them initially with .d-none and bring them back on medium-sized devices with .d-md-block. -->
+        <div class="carousel-caption d-none d-md-block">
+          <h5> restaurant review </h5>
+          <p> Responsive site review restaurant </p>
+        </div>
+        <h3>Restaurant Review</h3>
 
         <!-- carousel -->
         <!-- https://getbootstrap.com/docs/4.0/components/carousel/#with-captions -->
-        <div class="carousel-item">
-          <img src="./image/restapplg.png" alt="restaurant review">
-          <!-- when user click go pop out and  -->
-          <!--  <a href="https://wizardly-albattani-92f76c.netlify.com/"></a> -->
-          <!-- hide them initially with .d-none and bring them back on medium-sized devices with .d-md-block. -->
-          <div class="carousel-caption d-none d-md-block">
-            <h5> restaurant review </h5>
-            <p> Responsive site review restaurant </p>
-          </div>
-          <h3>Restaurant Review</h3>
-
-          <!-- carousel -->
-          <!-- https://getbootstrap.com/docs/4.0/components/carousel/#with-captions -->
-          
+        
+      </div>
+      <div class="carousel-item">
+        <img src="./image/todoapp.png" alt="Todo app">
+        <!-- when user click go pop out and  -->
+        <!--  <a href="https://wizardly-albattani-92f76c.netlify.com/"></a> -->
+        <!-- hide them initially with .d-none and bring them back on medium-sized devices with .d-md-block. -->
+        <div class="carousel-caption d-none d-md-block">
+          <h5> Todo app </h5>
+          <p> Track your todos </p>
         </div>
-        <div class="carousel-item">
-            <img src="./image/todoapp.png" alt="Todo app">
-            <!-- when user click go pop out and  -->
-            <!--  <a href="https://wizardly-albattani-92f76c.netlify.com/"></a> -->
-            <!-- hide them initially with .d-none and bring them back on medium-sized devices with .d-md-block. -->
-            <div class="carousel-caption d-none d-md-block">
-              <h5> Todo app </h5>
-              <p> Track your todos </p>
-            </div>
-          <!-- https://heggy231.github.io/todoList/ -->
-        </div>
-      </section>
-      <section id="volunteer"></section>
-      <section id="reference"></section>
-      <section id="contact"></section>
-    </main>
-    <footer id="social">
-        <i class="fab fa-linkedin-in"></i> |
-    </footer>
-    <script src="./script.js"
-    ></script>
+      <!-- https://heggy231.github.io/todoList/ -->
+      </div>
+    </section>
+    <section id="testimonial-flex-wrapper">
+      <div id="testimonial-1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae deleniti.
+      </div>
+      <div id="testimonial-2">
+        Placeat ullam necessitatibus. Ea sit repellendus dolorum labore nesciunt, ab maxime ipsum aspernatur.
+      </div>
+      <div id="testimonial-3">
+        Architecto et cumque minus, provident porro perspiciatis.
+      </div>
+    </section>
+    <section id="contact"></section>
+  </main>
+  <footer id="social-flex">
+      <i class="fab fa-linkedin-in"></i> |
+  </footer>
+  <script src="./script.js"
+  ></script>
 </body>
 </html>
