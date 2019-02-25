@@ -23,14 +23,16 @@ $(document).ready(function () {
 
   // carousel 
   $(".fas.fa-arrow-left").click(function(){
+    // user has clicked on left button
     showWhichProject(true);
   });
 
   $(".fas.fa-arrow-right").click(function(){
+    // user has clicked on right button
     showWhichProject(false);
   });
 
-  // testimoy to slide with SetTimeout method eve 5sec
+  // testimony to slide with SetTimeout method eve 5sec
   showHideWhichTestimony();
 
   $(".myProjectPhoto").click(function(e){
@@ -64,39 +66,63 @@ function makePanelStick() {
 }
 
 // ########## carousel setTimeOut method function starts here is global variable so that I can reassign value 1,2,0,1,2.... ###########
-// arrow only works 1695px
+// prev arrow keeps moving around ** need help how to fix the arrow in spot
 var myCarouselProjectArray = $("#mycarousel-flex-wrapper > div.myProjectPhoto");
 var myCarouselProjectState = 0;
 function showWhichProject(clicknext) {
   // debugger;
   if(clicknext) {
+    // user clicked on left > showWhichProject(true) => decrement i--
+    // start at myCarouselProjectArray[0] default is show, put myCarouselProjectState to go 3,2,1,0,3,2,1,... i--
+    // ex) state = 0 photo showWhichProject(true) go left (last photo) myCarouselProjectState: -1 (-1/4 mod => -1) => if stmt will set State  = lastphoto
+    // ex) state = 1 photo showWhichProject(true) go left (first photo) myCarouselProjectState: 0 (0/4 mod => 0)
+    //  Cheatsheet for modulus: if a%b if a < b then answer: a
+    //                          if a%b if a = b then answer: 0
     myCarouselProjectState = (myCarouselProjectState - 1) % myCarouselProjectArray.length;
   } else {
+    // user clicked on right button showWhichProject(false)
+    // start at myCarouselProjectArray[0] default is show, put myCarouselProjectState to go 1,2,3,0,1,2,3,0... i++
+    // ex) state = 0 photo showWhichProject(false) go right (second photo) myCarouselProjectState: 1 (1/4 mod => 1)
+    // ex) state = 1 photo showWhichProject(false) go right (third photo) myCarouselProjectState: 2 (2/4 mod => 2)
+    //  Cheatsheet for modulus: if a%b if a < b then answer: a
+    //                          if a%b if a = b then answer: 0
     myCarouselProjectState = (myCarouselProjectState + 1) % myCarouselProjectArray.length;
   }
-  // when my state becomes -1; Lets go to the last img
+  // when state is -1, set state to last ith img
+  //   User currently on 1st img > expects to see last img of array
+  //    set ProjectState to array.length -1 (last ith img)
   if(myCarouselProjectState < 0){
     myCarouselProjectState = myCarouselProjectArray.length - 1;
   }
 
+  // Goal of this for loop is to only show one photo at a time
+  //  show only when ith = myCarouselProjectState and hide all others.
 	for (var i = 0; i < myCarouselProjectArray.length; i++) {
+    // myCarouselProjectState no is same ith photo I want to show()
+    //  loop thru until state = ith photo > show only that.
+    // ex: projectState(1) => only $(myCarouselProjectArray[1]).show() everything else gets .hide()
     if( i === myCarouselProjectState ) {
-        $(myCarouselProjectArray[i]).show()
-      } else {
+      // matching ith, state no => now show that (next/prev photo)
+      $(myCarouselProjectArray[i]).show()
+    } else {
+      // all other photos hide 
       $(myCarouselProjectArray[i]).hide()
     }
 	}
 }
 
-// ########## testimonyState setTimeOut method function starts here is global variable so that I can reassign value 1,2,0,1,2.... ###########
+// ########## testimonyState setTimeOut method function starts here.  Set global variable testimonialArray, reassign value to loop 1,2,0,1,2.... ###########
+// from id testimonial-flex-wrapper and pick first generation div's
 var testimonialArray = $("#testimonial-flex-wrapper > div");
 console.log(`testimonialArray below: `)
 console.log( testimonialArray);
+// state stores current ith position of photo, loop thru by imcrementing
+//  up until the last photo and start back up from first photo
 var testimonyState = 0;
 function showHideWhichTestimony() {
-  // start at testimony[0] default is show, put testimonyState to go 1,2,0,1,2,0...
-  //  first run of my showHideWhichTestimony(), testimonyState is 1
-  //  second run testimonyState is 2 (2/3 mod is 2)
+  // start at testimony[0] default is show, therefore, I want to show next photo i+1.  
+  //  first run of my showHideWhichTestimony(), testimonyState set to 1
+  //  second run testimonyState set to 2 (2/3 mod is 2)
   //  Cheatsheet for modulus: if a%b if a < b then answer: a
   //                          if a%b if a = b then answer: 0
   testimonyState = (testimonyState + 1) % testimonialArray.length; 
@@ -116,8 +142,9 @@ function showHideWhichTestimony() {
   }
   // 5sec later call showHideWhichTestimony() again using setTimeout() method
   //  testimony sliding automatically resr: https://www.w3schools.com/jsref/met_win_settimeout.asp
-  // donot call with showHideWhichTestimony() since it is a call back it will stack overflow crash window.  setTimeOut only call 5seonds from now only once. and it gets called when my 
-  // Then I need to put it in my function 
+  // !!Do not call with showHideWhichTestimony() since it is a callback 
+  // only function name is required.  if call showHideWhichTestimony() it will stack overflow > crash window.  setTimeOut calls the function after 5s only once but it becomes recursive by function calling itself.
+  // having it calling function itself below makes it loop infinitely 
   setTimeout(showHideWhichTestimony, 5000);
 }
 

@@ -1,4 +1,4 @@
-
+[ x ] multicolumn layout section maybe with project topic
 - A working site, built by you, hosted somewhere on the internet.
 - A Git repository, hosted on your personal GitHub, that includes a link to your hosted site and frequent commits dating back to the beginning of the project.
 [ ] Use Flexbox/Grid to create a multi-column layout.

@@ -1,25 +1,35 @@
-[ ] multicolumn layout section maybe with project topic
 
+# Unit 1 Project Build an About Me Site
+![direction]( https://git.generalassemb.ly/sf-wdi-51/project-00)
+Description:
 
 # links 
-requirement: https://git.generalassemb.ly/sf-wdi-51/project-00
-flexbox: https://git.generalassemb.ly/sf-wdi-51/css-flexbox
+- requirement: https://git.generalassemb.ly/sf-wdi-51/project-00
+- resource: 
+	- flexbox: https://git.generalassemb.ly/sf-wdi-51/css-flexbox
 
 ### A `README.md` file with explanations of Technologies used.
-	- HTML5, 
-	- CSS, 
-	- JavaScript, 
-	- JQuery, 
-	- Bootstrap 4.0
+	- HTML5
+	- CSS
+	- JavaScript
+	- JQuery
+	- Grid
+	- Flexbox
 
 - RoadBlocks and How I resolved them:
 Description: Here are some trouble I ran into and how I resolved them and some are still unsolved problems.
 	1) How to quickly jump to different section of the page:
+	Issue: 	It was not jumping at first.  
+	Resolve: I forgot to add # for id.
+
 	![issue](https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2FJump%20to%20a%20section.png?1550218364372) 
 		* href, section id matching with project.
-	![resolved](https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2Ffinal%20jump.png?1550218363558)
+	![bug](https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2Ffinal%20jump.png?1550218363558)
+		* Added #
+	<img src="https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2FScreen%20Shot%202019-02-24%20at%2011.30.28%20PM.png?1551079857565"  alt="added # key" width="60%">
+	
 
-	2) Smooth scrolling: after some research I found out 
+	2) Smooth scrolling [ to do ]
 
 
 	3) How to set font-size and which unit to use?  
@@ -31,7 +41,9 @@ Description: Here are some trouble I ran into and how I resolved them and some a
 
 	4) nav bar to stick
 https://codepen.io/heggy231/pen/KJONWX
-	I used flex space between
+	I used flex space between for nav bar.
+	Grid section content were on top of the nav bar.
+	-resolve: added z-index
 
 - Your process/approach.
 	Process, approach: 
@@ -42,20 +54,79 @@ https://codepen.io/heggy231/pen/KJONWX
 	- Second, I build the semantic HTML structure.
 - Unsolved problems.
 - Your biggest wins and challenges.
-#### challenges: 
+#### Challenges: 
 - I want the nav bar hover to fill in all the space so I put div around it and added padding to get some space.
 <img src="https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2Fthumbnails%2FScreen%20Shot%202019-02-22%20at%2011.58.42%20PM.png?1550908757222" alt="navbar hover color" width="60%">
 <img src="https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2Fthumbnails%2FScreen%20Shot%202019-02-22%20at%2011.53.19%20PM.png?1550908755896" alt="navbar html code" width="60%">
 
 ### Challenges: 
 - forgetting to add script in my html
-- same height for my kid col in grid: 
+
+- How to make my kid col to have same height when doing grid.
 <img src="https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2FScreen%20Shot%202019-02-24%20at%201.26.50%20PM.png?1551043712618" alt="grid both col how to make it equal" width="60%">
 
 
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Unit 1 Project Build an About Me Site
-![direction]( https://git.generalassemb.ly/sf-wdi-51/project-00)
-Description:
+- Bug: Arrow for prev, next for carousel keep moving around
+	-Not resolved
+	<img src="https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2FScreen%20Shot%202019-02-24%20at%2011.36.23%20PM.png?1551080234938" width="60%">
+
+	<img src="https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2FScreen%20Shot%202019-02-24%20at%2011.36.17%20PM.png?1551080236810" width="60%">
+
+- Bug: Carousel user is at the first photo and press previous which sets ith photo = -1.  Expected to see previous photo (last photo of the array), however, no photo shows up.
+	<img src="https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2FScreen%20Shot%202019-02-24%20at%208.44.37%20PM.png?1551069924035" width="100%">
+	- Resolve: Add a if statement to catch when state = -1 then reset state to array.length -1 (last photo).
+	```javascript
+	// when state is -1, set it last ith as myCarouselProjectState no
+	if(myCarouselProjectState < 0){
+		myCarouselProjectState = myCarouselProjectArray.length - 1;
+	}
+	```
+### Challenges: 
+- Bug: App crashing when running setTimeout for testimonial.
+	```javascript
+	// run once
+	setTimeout(showHideWhichTestimony(), 5000);
+	```
+	- Resolve: Pass the function like a parameter. Resource: http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/
+	```javascript
+	// run once
+	setTimeout(showHideWhichTestimony, 5000);
+	```
+
+- Bug: Testimony only runs once when I want it to loop forever
+	```javascript
+	function showHideWhichTestimony() {
+		testimonyState = (testimonyState + 1) % testimonialArray.length;
+		for(var i = 0; i < testimonialArray.length; i++){
+			if(i === testimonyState){
+				$(testimonialArray[i]).show();
+			} else {
+				$(testimonialArray[i]).hide();
+			}
+		}
+	}
+	```
+	Then, I called setTimeout outside of the function.  But setTimeOut only runs once and stops.
+	- Resolve: Make the function recursive.
+	```javascript
+	function showHideWhichTestimony() {
+		testimonyState = (testimonyState + 1) % testimonialArray.length;
+		for(var i = 0; i < testimonialArray.length; i++){
+			if(i === testimonyState){
+				$(testimonialArray[i]).show();
+			} else {
+				$(testimonialArray[i]).hide();
+			}
+		}
+		setTimeout(showHideWhichTestimony, 5000);
+	}
+	```
+### Challenges: 
+- Bug: Lighthouse effect doesnt' work
+<img src="https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2FScreen%20Shot%202019-02-24%20at%2011.44.18%20PM.png?1551080677934" alt="lightbox issue" width="60%">	
+- Not resolved: I was able to get the .src from e.currentTarget
+but photo doesnt' show up.
+<img src="https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2FScreen%20Shot%202019-02-24%20at%2011.46.18%20PM.png?1551080795281" alt="lightbox buggy code" width="60%">
 
 #### Overview
 
