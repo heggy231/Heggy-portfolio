@@ -226,15 +226,47 @@ https://www.maxpixel.net/Coral-Volcanic-Rock-Background-Great-Adventure-3062014
 
 */
 
-/* hamburger menu */
-
+/* ########### hamburger menu ######### */
 .hamburger-nav-bar {
   display: none;
 }
 .hamburger-menu-icon {
   display: none !important;
 }
-/* Testimonial */
+
+/* ########## mycarousel project ######### */
+#mycarousel-flex-wrapper {
+  display: flex;
+  justify-content: center;
+
+}
+
+#mycarousel-flex-wrapper > div {
+  width: 25%;
+  margin: 0 auto;
+}
+#mycarousel-item-2, #mycarousel-item-3, #mycarousel-item-4 {
+  /* only get one project photo to show */
+  display: none;
+}
+
+#mycarousel-container {
+
+}
+
+.fas.fa-arrow-left {
+  /* not really know about this position relative to what?*/
+  position: relative;
+  right: -322px;
+  top: 229px;
+}
+
+.fas.fa-arrow-right {
+  position: relative;
+  left: -322px;
+  top: 229px;
+}
+/* ############# Testimonial ############ */
 #testimonial-flex-wrapper {
   display: flex;
   justify-content: center;
@@ -243,6 +275,7 @@ https://www.maxpixel.net/Coral-Volcanic-Rock-Background-Great-Adventure-3062014
 
 #testimonial-flex-wrapper div {
   text-align: center;
+  font-size: .8rem;
 }
 
 #testimonial-2, #testimonial-3 {
@@ -262,7 +295,6 @@ section > .grid-column */
 section .grid-column {
   padding: 15px;
   background-color: #EBF2FA;
-  
 }
 /* But changing padding wouldn't make a difference since box-sizing is set to border-box
    Add border to see where my col sits
@@ -285,7 +317,7 @@ section .grid-column {
   text-align: inherit;
 }
 /* set my kid col to take up hal of parent row grid container */
-.testi-grid-col-half {
+.why-grid-col-half {
   width: 49%; /* remember I added margin .5 on this col so I need to minu 1% (left, right) it can't be 50% here*/
 }
 /*
@@ -309,13 +341,6 @@ Also if you added margin to the column take that amount out
 */
 /* (n / 12) * 100 = 6/12 * 100 =  16.66% */
 
-/* ########## caroussel ########### */
-.mycarousel-container {
-  
-}
-.mycarousel-item {
-  width: 24%;
-}
 
 /* Footer
    ================================================================ */
@@ -326,6 +351,9 @@ footer {
   justify-content: center;
 }
 
+footer > p {
+  margin-left: 12px;
+}
 /* when viewport width is 690px or less do this*/
 @media only screen and (max-width: 690px) {
   .hamburger-menu-icon {

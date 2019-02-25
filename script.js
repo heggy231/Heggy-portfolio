@@ -21,6 +21,15 @@ $(document).ready(function () {
     $(".hamburger-nav-bar").toggle();
   });
 
+  // carousel 
+  $(".fas.fa-arrow-left").click(function(){
+    showWhichProject(true);
+  });
+
+  $(".fas.fa-arrow-right").click(function(){
+    showWhichProject(false);
+  });
+
   // testimoy to slide with SetTimeout method eve 5sec
   showHideWhichTestimony();
 
@@ -44,7 +53,31 @@ function makePanelStick() {
 }
 
 // ########## carousel setTimeOut method function starts here is global variable so that I can reassign value 1,2,0,1,2.... ###########
-var myCarouselProjectArray = $(".mycarousel-container > div");
+// arrow only works 1695px
+var myCarouselProjectArray = $("#mycarousel-flex-wrapper > div.myProjectPhoto");
+var myCarouselProjectState = 0;
+function showWhichProject(clicknext) {
+  debugger;
+  if(clicknext) {
+    myCarouselProjectState = (myCarouselProjectState - 1) % myCarouselProjectArray.length;
+  } else {
+    myCarouselProjectState = (myCarouselProjectState + 1) % myCarouselProjectArray.length;
+  }
+  // when my state becomes -1; Lets go to the last img
+  if(myCarouselProjectState < 0){
+    myCarouselProjectState = myCarouselProjectArray.length - 1;
+  }
+
+	for (var i = 0; i < myCarouselProjectArray.length; i++) {
+    if( i === myCarouselProjectState ) {
+        $(myCarouselProjectArray[i]).show()
+      } else {
+      $(myCarouselProjectArray[i]).hide()
+    }
+	}
+}
+
+
 
 
 

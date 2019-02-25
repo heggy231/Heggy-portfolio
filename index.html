@@ -69,8 +69,8 @@
       <!-- ##### let's try grid here  ####-->
       <!-- for my parent grid container (grid-row) I add clearfix to keep following elements not intrude into my grid system -->
       <div class="grid-row clearfix">
-        <div class="grid-column testi-grid-col-half">Always in demand: Back in year 2009, I got laid off from my first job out of college as an accountant.  While unemployed, I noticed there are many software engineer jobs vs. accounting jobs. So I decided to jump into tech to become a in-demand professional!  Since then I never looked back.</div>
-        <div class="grid-column testi-grid-col-half">Resources: So many great free community of helpers, local meetups full of teachers resources.  I love learning with people.  With so many meetups I attend, it feels like a real community.  Meanwhile, with the skill, I can make the world a better place!</div>
+        <div class="grid-column why-grid-col-half">Always in demand: Back in year 2009, I got laid off from my first job out of college as an accountant.  While unemployed, I noticed there are many software engineer jobs vs. accounting jobs. So I decided to jump into tech to become a in-demand professional!  Since then I never looked back.</div>
+        <div class="grid-column why-grid-col-half">Resources: So many great free community of helpers, local meetups full of teachers resources.  I love learning with people.  With so many meetups I attend, it feels like a real community.  Meanwhile, with the skill, I can make the world a better place!</div>
       </div><!-- end of why-grid-parentContainer -->
 <!-- #### carousel #### -->
       <!-- https://getbootstrap.com/docs/4.0/components/carousel/#with-captions 
@@ -79,37 +79,46 @@
       https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_ref_js_carousel2&stacked=h
       -->
       <!-- bootsrap grid for my carousel https://getbootstrap.com/docs/4.1/layout/grid/ -->
-      <div class="grid-row mycarousel-container clearfix">
-        <div class="grid-column mycarousel-item-1">
+      <div id="mycarousel-flex-wrapper" class="grid-row clearfix">
+        <div id="navLeft"><i class="fas fa-arrow-left"></i></div>
+
+        <div id="mycarousel-item-1" class="myProjectPhoto">
           <img src="./image/pika.PNG" alt="restaurant review">
         </div>
-        <div class="grid-column mycarousel-item-2">
+        <div id="mycarousel-item-2" class="myProjectPhoto">
           <img src="./image/party.PNG" alt="Todo app">
         </div>
-        <div class="grid-column mycarousel-item-3">
+        <div id="mycarousel-item-3" class="myProjectPhoto">
           <img src="./image/maudie.PNG" alt="Todo app">
         </div>
-        <div class="grid-column mycarousel-item-4">
+        <div id="mycarousel-item-4" class="myProjectPhoto">
           <img src="./image/yelp.PNG" alt="Todo app">
         </div>
-      </div><!-- #### end of mycarousel-container #### -->
+        <!-- end of project photos  -->
+        <div id="navRight"><i class="fas fa-arrow-right"></i></div>
+      </div><!-- #### end of mycarousel-wrapper #### -->
     </section><!-- #### end of project #### -->
     
     <section id="testimonial-flex-wrapper">
       <div id="testimonial-1">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae deleniti.
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae deleniti."
       </div>
       <div id="testimonial-2">
-        Placeat ullam necessitatibus. Ea sit repellendus dolorum labore nesciunt, ab maxime ipsum aspernatur.
+        "Placeat ullam necessitatibus. Ea sit repellendus dolorum labore nesciunt, ab maxime ipsum aspernatur."
       </div>
       <div id="testimonial-3">
-        Architecto et cumque minus, provident porro perspiciatis.
+        "Architecto et cumque minus, provident porro perspiciatis."
       </div>
     </section>
     <section id="contact"></section>
   </main>
   <footer id="social-flex">
-      <i class="fab fa-linkedin-in"></i> |
+      <a href="https://www.linkedin.com/in/heggy/" target="_blank">
+        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+        <!-- for screen reader -->
+        <span class="sr-only">LinkedIn</span>
+      </a>
+      <p>Copyright 2017 by Heggy Castaneda</p>
   </footer>
   <script src="./script.js"
   ></script>
