@@ -33,6 +33,17 @@ $(document).ready(function () {
   // testimoy to slide with SetTimeout method eve 5sec
   showHideWhichTestimony();
 
+  $(".myProjectPhoto").click(function(e){
+    // debugger;
+    console.log(e);
+    // e.currentTarget.firstElementChild.src
+    // var eventTargetImgSrc = e.currentTarget.firstElementChild.src;
+    var clickImgSrc = e.currentTarget.firstElementChild.src
+    var lightBoxImgSrc = $(".lightbox img")[0].src;
+
+    lightBoxImgSrc = clickImgSrc;
+    // $("#my_image").attr("src","second.jpg");
+  });
 }); // end of (document).ready
 
 
@@ -57,7 +68,7 @@ function makePanelStick() {
 var myCarouselProjectArray = $("#mycarousel-flex-wrapper > div.myProjectPhoto");
 var myCarouselProjectState = 0;
 function showWhichProject(clicknext) {
-  debugger;
+  // debugger;
   if(clicknext) {
     myCarouselProjectState = (myCarouselProjectState - 1) % myCarouselProjectArray.length;
   } else {
@@ -77,12 +88,10 @@ function showWhichProject(clicknext) {
 	}
 }
 
-
-
-
-
 // ########## testimonyState setTimeOut method function starts here is global variable so that I can reassign value 1,2,0,1,2.... ###########
 var testimonialArray = $("#testimonial-flex-wrapper > div");
+console.log(`testimonialArray below: `)
+console.log( testimonialArray);
 var testimonyState = 0;
 function showHideWhichTestimony() {
   // start at testimony[0] default is show, put testimonyState to go 1,2,0,1,2,0...

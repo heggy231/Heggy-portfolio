@@ -173,8 +173,8 @@ body {
   display: flex;
   /* how much each flex item div will grown relative to rest */
   justify-content: space-between;
-  background-color: rgba(210, 213, 221, 0.6) /* light gray with transp*/
-
+  background-color: rgba(210, 213, 221, 0.6); /* light gray with transp*/
+  z-index: 4;
 }
 
 /* Navbar links */
@@ -250,27 +250,33 @@ https://www.maxpixel.net/Coral-Volcanic-Rock-Background-Great-Adventure-3062014
   display: none;
 }
 
-#mycarousel-container {
-
+#navRight {
+  position: relative;
 }
-
+#navLeft {
+  position: relative;
+}
 .fas.fa-arrow-left {
   /* not really know about this position relative to what?*/
-  position: relative;
-  right: -322px;
-  top: 229px;
+  position: absolute;
+  right: -120px;
+  top: 350px;
+  color: #474747;
+  background-color: rgba(235,242,250,0.8);
 }
 
 .fas.fa-arrow-right {
-  position: relative;
-  left: -322px;
-  top: 229px;
+  position: absolute;
+  left: -120px;
+  top: 350px;
+  color: #474747;
+  background-color: rgba(235,242,250,0.8);
 }
 /* ############# Testimonial ############ */
 #testimonial-flex-wrapper {
   display: flex;
   justify-content: center;
-  
+  margin: 2rem 0;
 }
 
 #testimonial-flex-wrapper div {
@@ -319,6 +325,7 @@ section .grid-column {
 /* set my kid col to take up hal of parent row grid container */
 .why-grid-col-half {
   width: 49%; /* remember I added margin .5 on this col so I need to minu 1% (left, right) it can't be 50% here*/
+  z-index: 1;
 }
 /*
 cheatsheet for grid calc for all dimension
@@ -349,6 +356,7 @@ footer {
   color: #bbb;
   display: flex;
   justify-content: center;
+  background-color: rgba(210, 213, 221, 0.6);
 }
 
 footer > p {
