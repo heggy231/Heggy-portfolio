@@ -325,7 +325,13 @@ section .grid-column {
 /* set my kid col to take up hal of parent row grid container */
 .why-grid-col-half {
   width: 49%; /* remember I added margin .5 on this col so I need to minu 1% (left, right) it can't be 50% here*/
+  /* keep the nav bar on top so I bring grid behind nav */
   z-index: 1;
+}
+
+.lightbox {
+  /* when img popup make it big on the screen */
+  max-width: 100%;
 }
 /*
 cheatsheet for grid calc for all dimension

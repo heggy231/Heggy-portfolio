@@ -42,7 +42,7 @@ $(document).ready(function () {
     var lightBoxImgSrc = $(".lightbox img")[0].src;
 
     lightBoxImgSrc = clickImgSrc;
-    // $("#my_image").attr("src","second.jpg");
+
   });
 }); // end of (document).ready
 
